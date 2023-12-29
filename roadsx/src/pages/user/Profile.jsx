@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom'
 import { useAuth } from '../../context/Auth'
 import UserMenu from '../../components/layout/UserMenu'
 import { useEffect, useState } from 'react'
-import { toast } from 'react-toastify'
+import toast  from 'react-hot-toast'
 import axios from 'axios'
 
 const Profile = () => {
@@ -49,10 +49,10 @@ const[auth,setAuth]=useAuth();
 
   return (
     <Layout>
-      <div className="w-[60%]  bg-white  text-black grid grid-cols-2">
+      <div className="w-[60%]  bg-white  text-black grid grid-cols-2 ">
         <UserMenu />
-        <div className="h-screen bg-white  flex flex-col ">
-          <form onSubmit={handelSubmit} className="max-w-[400px] w-full mx-auto bg-white shadow-2xl p-8 px-8 rounded-lg">
+        <div className="h-[70vh] bg-white ss:w-[17rem] sm:w-[18rem] ss:-ml-16 sm:-ml-16 md:w-96 md:ml-40  flex flex-col ">
+          <form onSubmit={handelSubmit} className="max-w-[400px] w-full mx-auto bg-white shadow-2xl p-8 px-8 rounded-lg ">
             <h2 className="text-4xl text-black font-serif text-center">
               Edit Profile{" "}
             </h2>
@@ -81,18 +81,7 @@ const[auth,setAuth]=useAuth();
                 disabled
               />
             </div>
-            <div className="flex flex-col py-2">
-              <input
-                className="rounded-lg shadow-zinc-200 shadow-xl  mt-2 p-2 focus:border-blue-500 focus:bg-slate-200 focus:outline-none"
-                type="password"
-                placeholder="Enter Your Password"
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                }}
-                value={password}
-              
-              />
-            </div>
+           
             <div className="flex flex-col py-2">
               <input
                 className="rounded-lg shadow-zinc-200 shadow-xl  mt-2 p-2 focus:border-blue-500 focus:bg-slate-200 focus:outline-none"

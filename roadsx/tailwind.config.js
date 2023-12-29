@@ -6,19 +6,26 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      inter:['Inter']
+    },
     screens: {
-      'sm': '359px',
-      'md': [
-        // Sidebar appears at 768px, so revert to `sm:` styles between 768px
-        // and 868px, after which the main content area is wide enough again to
-        // apply the `md:` styles.
-        {'min': '300px', 'max': '900px'},
-        {'min': '868px'}
-      ],
-      'lg': '958px',
-      'xl': '1400px',
-    }
+      'ss':{'min':'300px','max':'639px'},
+      'sm': {'min': '640px', 'max': '767px'},
+      // => @media (min-width: 640px and max-width: 767px) { ... }
+
+      'md': {'min': '768px', 'max': '1023px'},
+      // => @media (min-width: 768px and max-width: 1023px) { ... }
+
+      'lg': {'min': '1024px', 'max': '1279px'},
+      // => @media (min-width: 1024px and max-width: 1279px) { ... }
+
+      'xl': {'min': '1280px', 'max': '1535px'},
+      // => @media (min-width: 1280px and max-width: 1535px) { ... }
+
+      '2xl': {'min': '1536px'},
+      // => @media (min-width: 1536px) { ... }
+    },
   },
   plugins: [],
-  
 }

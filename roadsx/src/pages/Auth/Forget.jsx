@@ -1,7 +1,7 @@
 import Layout from "../../components/layout/Layout"
 import  { useState } from 'react'
-import { toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast from 'react-hot-toast';
+
 import axios from "axios";
  import { useNavigate } from 'react-router-dom';
 
@@ -29,7 +29,7 @@ const Forget = () => {
         toast.error(res.data.message)
       }
     } catch (error) {
-      toast.error("ERROR")
+      toast.error("Couldn't Reset Profile")
       
     }
    

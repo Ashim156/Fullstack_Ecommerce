@@ -12,21 +12,21 @@ const Footer = () => {
             <AiOutlineYoutube size={"1.5rem"}/>
           </div>
         </div>
-        <div className='flex flex-col space-y-3'>
+        <div className='flex flex-col space-y-3 sm:hidden ss:hidden'>
           <h1>Comapny</h1>
           <a className='text-sm text-gray-400' href="/">About us</a>
           <a className='text-sm text-gray-400' href="/">Contact Us</a>
           <a className='text-sm text-gray-400' href="/">Services</a>
           <a className='text-sm text-gray-400' href="/">Blog</a>
         </div>
-        <div className='flex flex-col space-y-3'>
+        <div className='flex flex-col space-y-3 ss:ml-20 ss:mt-9'>
         <h1>Comapny</h1>
           <a className='text-sm text-gray-400' href="/">About us</a>
           <a className='text-sm text-gray-400' href="/">Contact Us</a>
           <a className='text-sm text-gray-400' href="/">Services</a>
           <a className='text-sm text-gray-400' href="/">Blog</a>
         </div>
-        <div className='flex flex-col space-y-3'>
+        <div className='flex flex-col space-y-3 ss:-mt-20'>
         <h1>Comapny</h1>
           <a className='text-sm text-gray-400' href="/">About us</a>
           <a className='text-sm text-gray-400' href="/">Contact Us</a>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='border-t py-2'>
-        <p>copy &copy;2022 <span className='font-bold'>E-commerce</span> All Rights Reserved</p>
+        <p>AshimPriya &copy;2023 <span className='font-bold'>RoadsX</span> All Rights Reserved</p>
       </div>
     </footer>
   )

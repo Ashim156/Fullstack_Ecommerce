@@ -1,8 +1,8 @@
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Layout from '../../components/layout/Layout'
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import toast  from 'react-hot-toast';
+
 import axios from "axios";
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/Auth';
@@ -16,6 +16,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
+  
 
   const handelSubmit = async (e) => {
     e.preventDefault();
@@ -34,15 +35,16 @@ const Login = () => {
           token: res.data.token
         });
         localStorage.setItem("auth", JSON.stringify(res.data));
-
+       
       } else {
         toast.error(res.data.message)
       }
     } catch (error) {
-      toast.error("ERROR")
+      toast.error("Email is not registered")
 
     }
   }
+ 
 
 
   return (

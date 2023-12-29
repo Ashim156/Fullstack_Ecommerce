@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import AdminMenu from "../../components/layout/AdminMenu"
 import Layout from "../../components/layout/Layout"
 import { useNavigate, useParams } from "react-router-dom";
-import { toast } from "react-toastify";
+import toast  from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
 const{Option}=Select
@@ -141,7 +141,7 @@ const UpdateProduct = () => {
       <Option value='1' >No</Option>
     </Select></div>
     <div className="w-full text-center text-xl bg-teal-800 shadow-lg shadow-teal-500/50 hover:shadow-teal-500/40 text-white font-semibold rounded-lg">
-      <button  onClick={handelUpdate}>Create Product</button>
+      <button  onClick={handelUpdate}>Update Product</button>
     </div>
     <div className="w-full text-center text-xl mt-4 bg-red-950 shadow-lg shadow-red-500/50 hover:shadow-red-500/40 text-white font-semibold rounded-lg">
       <button  onClick={handelDelete}>Delete Product</button>

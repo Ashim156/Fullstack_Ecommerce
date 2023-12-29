@@ -21,18 +21,18 @@ const Search = () => {
     }
   return (
     <>
-    <form onSubmit={handelSearch}>
+    <form className="" onSubmit={handelSearch}>
 
-   
+  
     <input
-                    type="text"
+                   type="text"
                     
-                    className="w-[40vw] px-4 py-2 bg-white text-black border rounded-full focus:border-bg-gray-100 focus:ring-teal-700 focus:outline-none focus:ring focus:ring-opacity-40 ml-10"
+                    className="w-[35vw] md:w-[28vw]  px-4 py-2 bg-white text-black border rounded-full focus:border-bg-gray-100 focus:ring-teal-700 focus:outline-none focus:ring focus:ring-opacity-40 ml-10"
                     placeholder="Search..."
                     value={values.keyword}
                     onChange={(e)=>{setValues({...values,keyword:e.target.value})}}
                 />
-                <button className="px-4 ">
+                <button className="px-4 md:hidden  ss:hidden sm:hidden">
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="w-5 h-5"

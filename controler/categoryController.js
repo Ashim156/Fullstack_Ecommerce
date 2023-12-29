@@ -47,7 +47,7 @@ export const updateCategoryController=async(req,res)=>{
         slug:slugify(name)},
         {new:true});
         res.status(200).send({
-        message:"updated",
+        message:"category updated",
         success:true,
         category
         })
@@ -109,7 +109,7 @@ try {
     const {id}=req.params
     const category= await categoryModel.findByIdAndDelete(id)
     res.status(200).send({
-        message:"deleted",
+        message:"category deleted",
         success:true,
         category
     })} catch (error) {

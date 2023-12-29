@@ -17,7 +17,7 @@ if(!password){
     res.send({message:"password is required"})
 }
 if(password.length<=7){
-    res.send({message:"Password Must be of 8 Digit"})
+    res.send({message:"Password Must be of 8 Characters"})
 
 }
 if(!phone){
@@ -77,21 +77,21 @@ export const loginController=async(req,res)=>{
         if(!email || !password){
             res.status(404).send({
                 success:false,
-                message:"Invalid email or password"
+                message:"Invalid Email or Password"
             })
         }
        const user = await userModel.findOne({email});
        if(!user){
       return  res.status(404).send({
             success:false,
-            message:"email not registered"
+            message:"Email Not Registered"
         })
        }
         const match = await comparePassword(password,user.password)
         if(!match){
           return  res.status(200).send({
                 success:false,
-                message:"invalid password"
+                message:"Invalid Password"
             })
         }
         const token= await Jwt.sign({_id : user._id}, process.env.JWT_SECRET,
@@ -99,7 +99,7 @@ export const loginController=async(req,res)=>{
         );
         res.status(202).send({
             success:true,
-            message:"login successfull",
+            message:"Login Successful",
             user:{
                 name: user.name,
                 email: user.email,
@@ -126,34 +126,34 @@ export const forgotController=async (req,res)=>{
     try {
         const {email,answer,newPassword}= req.body;
         if(!email){
-            res.status(400).send({message:"email is required"})
+            res.status(400).send({message:"Email is Required"})
         }
         if(!newPassword){
-            res.status(400).send({message:"new password is required"})
+            res.status(400).send({message:"New Password is Required"})
         }
         if(!answer){
-            res.status(400).send({message:"answer is required"})
+            res.status(400).send({message:"Answer is Required"})
         }
 
         const user= await userModel.findOne({email,answer})
         if(!user){
             res.status(404).send({
                 success:false,
-                message:"email or answer invalid"
+                message:"Invalid Email or Password"
             })
         }
         const hashed=await hashPassword(newPassword);
         await userModel.findByIdAndUpdate(user._id,{password:hashed})
         res.status(200).send({
             success:true,
-            message:"password reset Sucessfully"
+            message:"Password Updated Successfully"
         })
         
     } catch (error) {
         console.log(error);
     res.status(500).send({
       success: false,
-      message: "Something went wrong",
+      message: "Couldn't Reset Password",
       error,
         })
         
@@ -180,13 +180,13 @@ export const updateProfile=async (req,res)=>{
 
 res.status(200).send({
     success:true,
-    message:"success",
+    message:"Profile Updated",
     updatedProfile
 })
     } catch (error) {
         res.status(400).send({
             success:false,
-            message:"error while updating"
+            message:"Error while updating"
         })
         
     }
@@ -203,7 +203,7 @@ export const ordersController=async(req,res)=>{
     } catch (error) {
         res.status(400).send({
             message:"error",
-            success:"false",
+            success:false,
             error
         })
         

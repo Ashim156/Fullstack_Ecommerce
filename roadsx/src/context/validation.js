@@ -2,7 +2,7 @@ import { createGlobalState } from "react-hooks-global-state";
 const { setGlobalState, useGlobalState } = createGlobalState ({
 id: 0,
  isLoggedIn: false, 
- currentUser: {} as any, 
+ currentUser: {}, 
     loginError: undefined, 
     loading: true,
     refreshPost: true,

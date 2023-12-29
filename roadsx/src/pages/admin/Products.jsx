@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import AdminMenu from "../../components/layout/AdminMenu"
 import Layout from "../../components/layout/Layout"
 
-import { toast } from "react-toastify"
+import toast  from "react-hot-toast"
 import axios from "axios"
 import { Link } from "react-router-dom"
 
@@ -32,7 +32,7 @@ const Products = () => {
   return (<>
     <Layout>
 
-    <div className='grid grid-cols-3 h-[100%] w-[95%] bg-white '>
+    <div className='grid grid-cols-3 h-full w-[95%] bg-white '>
    <AdminMenu/>
 <div className='  text-center grid col-span-2 place-content-center text-6xl text-green-900 '> 
 <h1 className="text-[4rem] font-serif text-black">Products List</h1>

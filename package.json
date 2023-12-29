@@ -14,6 +14,8 @@
     "author": "Ashim",
     "license": "MIT",
     "dependencies": {
+        "@tsparticles/react": "^3.0.0",
+        "@tsparticles/slim": "^3.0.2",
         "axios": "^1.4.0",
         "bcrypt": "^5.0.1",
         "braintree": "^3.16.0",
@@ -29,7 +31,9 @@
         "nodemon": "^1.14.9",
         "react-dom": "^18.2.0",
         "react-router-dom": "^6.12.1",
+        "react-spinners": "^0.13.8",
         "react-toastify": "^9.1.3",
-        "slugify": "^1.6.6"
+        "slugify": "^1.6.6",
+        "tsparticles": "^3.0.2"
     }
 }

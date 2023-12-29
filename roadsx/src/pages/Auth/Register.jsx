@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Layout from '../../components/layout/Layout'
-import { toast } from 'react-toastify';
+import toast  from 'react-hot-toast';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import { useNavigate } from 'react-router-dom';
@@ -23,7 +23,7 @@ const Register = () => {
       const res = await axios.post("http://localhost:8080/api/v1/auth/register", { name, address, phone, email, password, answer });
       console.log(res)
       if(password<=6){
-        toast.error("error")
+        toast.error("More than 6 characters required")
       }
 
     
@@ -35,7 +35,7 @@ const Register = () => {
         toast.error(res.data.message)
       }
     } catch (error) {
-      toast.error("ERROR")
+      toast.error("Coundn't Registered")
 
     }
 

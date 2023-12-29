@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import AdminMenu from "../../components/layout/AdminMenu"
 import Layout from "../../components/layout/Layout"
 import axios from "axios"
-import { toast } from "react-toastify"
+import toast  from "react-hot-toast"
 import CategoryForm from "../../components/form/CategoryForm"
 import {Modal,Button} from "antd";
 
@@ -28,7 +28,7 @@ const CreateCategory = () => {
         toast.error("error to create")
       }
     } catch (error) {
-      toast.error("error in form validation")
+      toast.error("error to create")
       
     }
 

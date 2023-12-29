@@ -47,6 +47,7 @@ const AdminOrders = () => {
    <>
  
    <Layout>
+    <div >
     <div className='grid grid-cols-3 mt-7 '>
       <AdminMenu/>
       <div className='grid col-span-2 mr-44 '>
@@ -56,7 +57,7 @@ const AdminOrders = () => {
   {order?.map((orders,index)=>{
       return(
         <>
-              <div className='flex  border justify-evenly  text-black bg-gray-200 shadow-inner shadow-gray-300 rounded-full '>
+              <div className='flex  border justify-evenly  text-black bg-gray-200 shadow-inner shadow-gray-300 rounded-full  '>
     <div className='flex flex-col'>
     <h1 className='text-bold text-3xl font-serif '>S.N</h1>
     <h1 className='text-bold text-2xl font-serif text-bold '>{`${index+1}.`}</h1>
@@ -93,7 +94,7 @@ const AdminOrders = () => {
     </div>
    
    </div>
-   <div className=" h-full grid grid-cols-3  mt-7 mb-6">
+   <div className=" grid grid-cols-3  mt-7 mb-6">
         <div className="grid col-span-2">
           <div >{orders?.products?.map((p)=>(
           <>
@@ -128,6 +129,7 @@ const AdminOrders = () => {
   </div>
    </div>
  
+   </div>
    </div>
     </Layout>
 

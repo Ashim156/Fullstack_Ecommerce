@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import AdminMenu from "../../components/layout/AdminMenu"
 import Layout from "../../components/layout/Layout"
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import toast  from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
 const{Option}=Select

@@ -5,7 +5,7 @@ import { Audio } from  'react-loader-spinner'
 import { useNavigate,useLocation } from 'react-router-dom';
 
 const Spinner = ({path="/login"}) => {
-    const [count,setCount]= useState(2);
+    const [count,setCount]= useState(5);
     const navigate=useNavigate()
     const location = useLocation()
 
@@ -20,8 +20,11 @@ const Spinner = ({path="/login"}) => {
   return (
     
 <>
-{count}
-<Audio
+
+  <div className='  text-3xl w-[100vw] h-[100vh] mx-auto max-w-7xl  flex flex-col justify-center items-center'>
+
+    <h1>Redirecting To You In {count} second...</h1>
+  <Audio
     height = "80"
     width = "80"
     radius = "9"
@@ -29,7 +32,10 @@ const Spinner = ({path="/login"}) => {
     ariaLabel = 'three-dots-loading'     
     wrapperStyle
     wrapperClass
-  />
+  /></div>
+
+
+
   </>
   )
 }

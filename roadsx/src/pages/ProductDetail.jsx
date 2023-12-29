@@ -66,7 +66,7 @@ setSimilar(data?.products)
             <h6 className="text-sm font-serif  w-[70%] ml-8">{product.description}</h6>
             <h1 className="text-lg font-bold ml-5 mt-3">Price:<br />
             </h1>
-            <h6 className="text-4xl font-serif ml-8">{`$${product.price}`}</h6>
+            <h6 className="text-4xl font-serif ml-8">{`Rs.${product.price}`}</h6>
             <button className='text-black border-black border-y-2 rounded-full hover:bg-black hover:text-white hover:rounded-full px-3 py-1 text-lg font-base mb-2 ml-6' onClick={()=>{setCart([...cart,product])
                    localStorage.setItem('cart',JSON.stringify([...cart,product]))}}>
                       <FaShoppingCart size={25} />

@@ -60,7 +60,7 @@ export const createProductController=async(req,res)=>{
 // get all product
 export const getProductController=async(req,res)=>{
 try {
-    const product=await productModel.find({}).select("-photo").limit(-12).sort({createdAt:-1}).populate('category');
+    const product=await productModel.find({}).select("-photo").limit(22).sort({createdAt:-1}).populate('category');
     res.status(200).send({
         message:"success",
         total: product.length,
@@ -89,7 +89,7 @@ export const singleProductController=async(req,res)=>{
         
     } catch (error) {
         res.status(400).send({
-            message:"error",
+            message:"couldn't get product",
             success:false,
             error
         })

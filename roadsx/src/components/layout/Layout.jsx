@@ -1,7 +1,7 @@
 
 import Headers from './Headers'
 import Footer from './Footer'
-import { ToastContainer } from 'react-toastify';
+import { Toaster } from 'react-hot-toast';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Layout = ({children}) => {
@@ -10,7 +10,7 @@ const Layout = ({children}) => {
     <Headers />
     
      <main className=''  >
-      <ToastContainer/>
+      <Toaster/>
      {children}
      </main >
     <Footer />
